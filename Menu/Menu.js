@@ -7,8 +7,12 @@ const toggleMenu = (e) => {
   
 }
 document.body.addEventListener('click', () => {
-  menu.classList.remove('menu--open')
-  TweenMax.from(menu, 1, {x:200, delay: 0.05 });
+
+  TweenMax.from(menu, 1, {x:-300, delay: 0.5 });
+  setTimeout(() => {
+    menu.classList.remove('menu--open')
+  }, 500)
+ 
 })
 
 // Start Here: Create a reference to the ".menu" class
