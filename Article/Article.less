@@ -33,16 +33,17 @@
     position: absolute;
     bottom: 0;
     left: 50%;
-    font-size: 12px;
+    font-size: 16px;
     color: grey;
     cursor: pointer;
     transform: translate(-50%);
     background-color: white;
+    
   }
 }
 
 .article-open {
-  height: 420px;
+  height: max-content;
 }
 
 .read {
@@ -52,7 +53,16 @@
   outline: none;
   cursor: pointer;
   margin: 1rem;
+  background: #388E3C;
+  color: azure;
+  font-size: 1.5rem;
+  &:hover {
+    border: 1px solid #388E3C;
+    background-color: azure;
+    color: #388E3C;
+  }
 }
+
 
 
 
