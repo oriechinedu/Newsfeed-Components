@@ -20,7 +20,7 @@ class Article {
     } else {
       this.expandButton.textContent = 'Expand'
     }
-    TweenMax.from(this.domElement, 0.5, {x:300, y: -200, opacity:0, scale:0.5});
+    TweenMax.from(this.domElement, 0.5, {x:300, y: -200, opacity:0, scale:0.5, ease:Bounce.easeOut});
     this.domElement.classList.toggle('article-open')
   }
 }
