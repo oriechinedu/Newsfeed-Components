@@ -1,14 +1,21 @@
 
-const toggleMenu = (e) => {
+const toggleMenu = () => {
   // Toggle the "menu--open" class on your menu refence. 
-  e.stopPropagation()
+  if(menu.classList.contains('menu--open')) {
+    TweenMax.to('.menu', .3, {width: '0px', display: 'none', opacity: 1});
+    TweenMax.to('.menu ul li', .05, { opacity: 0});
+  } else {
+    TweenMax.to('.menu', .2, {width: '350px', display: 'block',opacity: 1});
+    TweenMax.to('.menu ul li', .05, { opacity: 1});
+  }
   menu.classList.toggle('menu--open')
-  TweenMax.from(menu, 0.2, {x:-200, delay: 0.05 });
-  
+ 
 }
-document.body.addEventListener('click', () => {
-  menu.classList.remove('menu--open')
-  TweenMax.from(menu, 1, {x:200, delay: 0.05 });
+document.querySelector('.articles').addEventListener('click', () => {
+  if(menu.classList.contains('menu--open')) {
+    toggleMenu()
+  }
+  
 })
 
 // Start Here: Create a reference to the ".menu" class
