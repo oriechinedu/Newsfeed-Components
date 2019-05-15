@@ -12,3 +12,12 @@ const menuButton  = document.querySelector('.menu-button');
 // Using your menuButton reference, add a click handler that calls toggleMenu
 
 menuButton.addEventListener('click', toggleMenu)
+
+const headerH1 = document.querySelector('.header h1')
+
+headerH1.addEventListener('mouseenter', () => {
+  headerH1.classList.add('animate');
+  setTimeout(() => {
+    headerH1.classList.remove('animate');
+  }, 5000)
+})
